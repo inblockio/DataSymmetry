@@ -1,8 +1,6 @@
 const { expect } = require("chai");
 const { BigNumber } = require("ethers");
-describe("Greeter", function() {
-
-  // 2 different Ethereum accounts
+describe("Writer", function() {
 
   it("should allow me to write and then read", async function() {
 
