@@ -9,7 +9,7 @@ import "hardhat/console.sol";
 /// The Ethereum address of the caller, as well as the timestamp is persisted in the Ethereum transaction log
 contract Writer {
 
-  event Written(uint256 index, bytes32[2] data);
+  event Written(uint256 index, bytes32[2] storedData);
 
   bytes32[2][] private data;
 
