@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const Writer = await hre.ethers.getContractFactory("Writer");
-  const writer = await Writer.deploy("Hello, Hardhat!");
+  const writer = await Writer.deploy();
 
   await writer.deployed();
 
