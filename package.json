@@ -6,8 +6,14 @@
   "scripts": {
     "test": "npx hardhat test",
     "node": "npx hardhat node",
-    "testdeploy": "npx hardhat run scripts/deploy.js",
-    "goerlideploy": "npx hardhat run scripts/deploy.js --network goerli"
+    "testWriterDeploy": "npx hardhat run scripts/deploy_writer.js",
+    "goerliWriterDeploy": "npx hardhat run scripts/deploy_writer.js --network goerli",
+    "ropstenWriterDeploy": "npx hardhat run scripts/deploy_writer.js --network ropsten",
+    "mainnetWriterDeploy": "npx hardhat run scripts/deploy_writer.js --network mainnet",
+    "testEventWriterDeploy": "npx hardhat run scripts/deploy_event_writer.js",
+    "goerliEventWriterDeploy": "npx hardhat run scripts/deploy_event_writer.js --network goerli",
+    "ropstenEventWriterDeploy": "npx hardhat run scripts/deploy_event_writer.js --network ropsten",
+    "mainnetEventWriterDeploy": "npx hardhat run scripts/deploy_event_writer.js --network mainnet"
   },
   "repository": {
     "type": "git",

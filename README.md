@@ -1,15 +1,18 @@
 # DataSymmetry
-
+## Install
+`yarn`
 ## Test
-`npm run test`
+`yarn run test`
 
 ## Deploy
 ### Local test environment
 **prepare**: get a local node with `npm run node` 
 
-**deploy**: `npm run testdeploy`
+**deploy**: `yarn run testWriterDeploy` or `yarn run testEventWriterDeploy`
 
-### Goerli
+### Ropsten
 **prepare**: replace `ALCHEMY_API_KEY` and `ROPSTEN_PRIVATE_KEY` in `hardhat.config.js`
 
-**deploy**: `npm run goerlideploy`
+**deploy**: `yarn run goerliWriterdeploy` or `yarn run goerliEventWriterDeploy`
+
+configuration is provided to deploy on ropsten and mainnet as well (see `hardhat.config.js`)
