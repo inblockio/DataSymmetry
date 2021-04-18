@@ -15,4 +15,5 @@
 
 **deploy**: `yarn run goerliWriterDeploy` or `yarn run goerliEventWriterDeploy`
 
-configuration is provided to deploy on ropsten and mainnet as well (see `hardhat.config.js`)
+- configuration is provided to deploy on ropsten and mainnet as well (see `hardhat.config.js`)
+- for a list of all availabel scripts look at the file `package.json`
