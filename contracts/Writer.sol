@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.3;
 
-import "hardhat/console.sol";
-
 /// @title Write data to Ethereum
 /// @author Eknir
 /// @notice You can use this contract to write 512 bits (64 bytes) of data to Ethereum, which is persisted in an array
