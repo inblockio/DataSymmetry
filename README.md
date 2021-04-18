@@ -13,6 +13,6 @@
 ### Ropsten
 **prepare**: replace `ALCHEMY_API_KEY` and `ROPSTEN_PRIVATE_KEY` in `hardhat.config.js`
 
-**deploy**: `yarn run goerliWriterdeploy` or `yarn run goerliEventWriterDeploy`
+**deploy**: `yarn run goerliWriterDeploy` or `yarn run goerliEventWriterDeploy`
 
 configuration is provided to deploy on ropsten and mainnet as well (see `hardhat.config.js`)
