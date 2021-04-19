@@ -19,7 +19,7 @@ Smart Contract address: 0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611. Ensure that 
 
 Helpful tools for manuel parsing of the SHA3 hash to create the two 32 Byte Hexvalues are [Generate SHA3 Online](https://www.browserling.com/tools/sha3-hash) [Count Characters Online](https://www.charactercountonline.com/).
 
-For linux commandline you can use 
+For generating the SHA3 hash for a file from the linux commandline you can use:
 `sha3sum -a 512 $FILENAME`
 
 # Deploy your own (event) writer contract
