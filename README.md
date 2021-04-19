@@ -17,6 +17,11 @@ This is a MVP which proofs that the owner of the Wallet (Account) wrote a SHA3 H
 IMPORTANT: You don't need to deploy the contract to the mainnet as it already is deployed and can be used under the 
 Smart Contract address: 0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611. Ensure that you are formatting the data input correctly to follow the following structure: [0x$HEXVALUE32BYTE,0x$HEXVALUE32BYTE]. For a SHA3 64 Byte Hash you need to split it in two 32 Byte pieces and provide them in the correct format for the Smart Contract to accept your input.
 
+Helpful tools for manuel parsing of the SHA3 hash to create the two 32 Byte Hexvalues are [Generate SHA3 Online](https://www.browserling.com/tools/sha3-hash) [Count Characters Online](https://www.charactercountonline.com/).
+
+For linux commandline you can use 
+`sha3sum -a 512 $FILENAME`
+
 # Deploy your own (event) writer contract
 
 ## Test
