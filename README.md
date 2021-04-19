@@ -2,7 +2,7 @@
 Target: Store SHA3 - 512bit (64Byte) on the Ethereum Blockchain.
 
 **Context**: To be able to proof ownership over data, it is essential to entanglement the data with Account and Time to be able to put Data into Spacetime.
-This is a MVP which proofs that the owner of the Wallet (Account) wrote a SHA3 Hash of a datastructure to the main-chain and with it entangles it with time through the transaction done and witnessed on the Ethereum Blockchain. The SHA3 Hash can be the result of a file or a merkle-tree. Wwith the source data statically stored and preserved it is possible to proof the existance and potential ownership over that digital asset.
+This is a MVP which proofs that the owner of the Wallet (Account) wrote a SHA3 Hash of a datastructure to the main-chain and with it entangles it with time through the transaction done and witnessed on the Ethereum Blockchain. The SHA3 Hash can be the result of a file or a merkle-tree. With the source data statically stored and preserved it is possible to proof the existance and potential ownership over that digital asset.
 
 ## Dependancies
 1. yarn commandline tool;
