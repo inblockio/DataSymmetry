@@ -6,10 +6,11 @@ This is a MVP which proofs that the owner of the Wallet (Account) wrote a SHA3 H
 
 ## Dependancies
 1. yarn commandline tool;
-2. [Alchemy API Key](https://dashboard.alchemyapi.io/) or access ot an Ethereum node for advanced users;
-3. [Ethereum Wallet e.g. Metmask](https://metamask.io/download) (Recommanded: Metamask);
-4. [Blockchain Explorer e.g. Etherscan.io](https://etherscan.io/)
-5. Top up your Ethereum Wallet to be able to pay for transactions by using a Faucet for a testnetwork or by using real Ether for mainnet deployment.
+2. sha3sum commandline tool (-a 512) $FILENAME
+3. [Alchemy API Key](https://dashboard.alchemyapi.io/) or access ot an Ethereum node for advanced users;
+4. [Ethereum Wallet e.g. Metmask](https://metamask.io/download) (Recommanded: Metamask);
+5. [Blockchain Explorer e.g. Etherscan.io](https://etherscan.io/)
+6. Top up your Ethereum Wallet to be able to pay for transactions by using a Faucet for a testnetwork or by using real Ether for mainnet deployment.
 
 # Use existing event writer contract
 
