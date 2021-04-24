@@ -15,12 +15,15 @@ This is a MVP which proofs that the owner of the Wallet (Account) wrote a SHA3 H
 # Use existing event writer contract
 
 IMPORTANT: You don't need to deploy the contract to the mainnet as it already is deployed and can be used under the 
-Smart Contract address: 0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611. Ensure that you are formatting the data input correctly to follow the following structure: [0x$HEXVALUE32BYTE,0x$HEXVALUE32BYTE]. For a SHA3 64 Byte Hash you need to split it in two 32 Byte pieces and provide them in the correct format for the Smart Contract to accept your input.
+Smart Contract address: 0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611.
 
-Helpful tools for manual parsing of the SHA3 hash to create the two 32 Byte hex values are [Generate SHA3 Online](https://www.browserling.com/tools/sha3-hash) [Count Characters Online](https://www.charactercountonline.com/).
-
-For generating the SHA3 hash for a file from the Linux command line you can use:
-`sha3sum -a 512 $FILENAME`
+The steps are:
+1. Make sure you have the Metamask extension ready in your web browser.
+2. Generate the SHA3 hash of your file. On a Linux command line, you can do `sha3sum -a 512 $FILENAME`. Alternatively, to obtain the SHA3 of a text, you can do it online at [Generate SHA3 Online](https://www.browserling.com/tools/sha3-hash).
+3. To prepare for the input to the smart contract, for a SHA3 64 Byte Hash you need to split it in two 32 byte pieces and provide them in the correct format for the smart contract to accept your input. You can do it online at [Count Characters Online](https://www.charactercountonline.com/).
+4. Go to https://etherscan.io/address/0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611#writeContract.
+5. Connect to Web3 (choose Metamask).
+6. In the input field ("data (bytes32[2])"), enter the two 32 byte pieces in the format of [0x$HEXVALUE32BYTE1,0x$HEXVALUE32BYTE2]
 
 # Deploy your own (event) writer contract
 
