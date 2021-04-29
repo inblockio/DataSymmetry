@@ -22,8 +22,8 @@ The steps are:
 2. Generate the SHA3 hash of your file. On a Linux command line, you can do `sha3sum -a 512 $FILENAME`. Alternatively, to obtain the SHA3 of a text, you can do it online at [Generate SHA3 Online](https://www.browserling.com/tools/sha3-hash). We also have a shell script in the [scripts folder](https://github.com/FantasticoFox/DataSymmetry/tree/main/scripts) that let you do step 2 and step 3 in one go: just do `./scripts/gethashsum.sh $FILENAME`.
 3. To prepare for the input to the smart contract, for a SHA3 64 Byte Hash you need to split it in two 32 byte pieces and provide them in the correct format for the smart contract to accept your input. You can do it online at [Count Characters Online](https://www.charactercountonline.com/).
 4. Go to https://etherscan.io/address/0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611#writeContract (mainnet) or https://goerli.etherscan.io/address/0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611#writeContract (Görli testnet).
-5. Connect to Web3 (choose Metamask). If the contract is on Görli testnet, make sure the Metamask wallet network choice is also Görli testnet.
-6. In the input field ("data (bytes32[2])"), enter the two 32 byte pieces in the format of [0x$HEXVALUE32BYTE1,0x$HEXVALUE32BYTE2] and then click the "Write" button.
+5. Connect to Web3 (choose Metamask). If the contract is on Görli testnet, make sure the Metamask wallet network choice is also Görli testnet. Sometimes you need to press the connect button a second time if the first attempt fails.  
+6. In the input field ("data (bytes32[2])"), enter the two 32 byte pieces in the format of [0x$HEXVALUE32BYTE1,0x$HEXVALUE32BYTE2] (e.g. `[0x678655c1f91fb4dbb27e1450fb41bcfd0209339c3493c595ab1fc294dd7a04eb,0x23dc74934aa2229d990b8eb92f8f89528667b7c604548f134c950b0edda374ef]`) and then click the "Write" button.
 
 # Deploy your own (event) writer contract
 
