@@ -2,6 +2,11 @@
 
 set -e
 
+if ! type sha3sum > /dev/null; then
+    echo "You don't have sha3sum in your PATH. Maybe it is not installed. Exiting."
+    exit 1
+fi
+
 fname=$1
 shasum="$(sha3sum -a 512 "$fname" | awk '{ print $1 }')"
 length=${#shasum}
