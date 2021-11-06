@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FantasticoFox/DataSymmetry.git"
+    "url": "git+https://github.com/inblockio/DataSymmetry.git"
   },
   "author": "eknir",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/FantasticoFox/DataSymmetry/issues"
+    "url": "https://github.com/inblockio/DataSymmetry/issues"
   },
-  "homepage": "https://github.com/FantasticoFox/DataSymmetry#readme",
+  "homepage": "https://github.com/inblockio/DataSymmetry#readme",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
