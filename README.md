@@ -12,18 +12,33 @@ This is a MVP which proofs that the owner of the Wallet (Account) wrote a SHA3 H
 5. [Blockchain Explorer e.g. Etherscan.io](https://etherscan.io/)
 6. Top up your Ethereum Wallet to be able to pay for transactions by using a Faucet for a test network or by using real Ether for mainnet deployment.
 
-# Use existing event writer contract
+# Witness contracts
 
-IMPORTANT: You don't need to deploy the contract to the mainnet as it already is deployed and can be used under the 
-Smart Contract address: 0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611, in both the mainnet and Görli testnet.
+## Current: AquaWitness (v2)
 
-The steps are:
-1. Make sure you have the Metamask extension ready in your web browser.
-2. Generate the SHA3 hash of your file. On a Linux command line, you can do `sha3sum -a 512 $FILENAME`. Alternatively, to obtain the SHA3 of a text, you can do it online at [Generate SHA3 Online](https://www.browserling.com/tools/sha3-hash). We also have a shell script in the [scripts folder](https://github.com/FantasticoFox/DataSymmetry/tree/main/scripts) that let you do step 2 and step 3 in one go: just do `./scripts/gethashsum.sh $FILENAME`.
-3. To prepare for the input to the smart contract, for a SHA3 64 Byte Hash you need to split it in two 32 byte pieces and provide them in the correct format for the smart contract to accept your input. You can do it online at [Count Characters Online](https://www.charactercountonline.com/).
-4. Go to https://etherscan.io/address/0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611#writeContract (mainnet) or https://goerli.etherscan.io/address/0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611#writeContract (Görli testnet).
-5. Connect to Web3 (choose Metamask). If the contract is on Görli testnet, make sure the Metamask wallet network choice is also Görli testnet. Sometimes you need to press the connect button a second time if the first attempt fails.  
-6. In the input field ("data (bytes32[2])"), enter the two 32 byte pieces in the format of [0x$HEXVALUE32BYTE1,0x$HEXVALUE32BYTE2] (e.g. `[0x678655c1f91fb4dbb27e1450fb41bcfd0209339c3493c595ab1fc294dd7a04eb,0x23dc74934aa2229d990b8eb92f8f89528667b7c604548f134c950b0edda374ef]`) and then click the "Write" button.
+Address: `0x269Ff9a5CB9BD5319bd95b248d2579Aa1e9D78FE` (ETH mainnet)
+
+Gas-optimized contract supporting both SHA3-256 and SHA3-512 hashes:
+- `witness(bytes32)` - for SHA3-256 (36 bytes calldata, ~23k gas)
+- `witness(bytes32,bytes32)` - for SHA3-512 (68 bytes calldata, ~23k gas)
+
+Events are fully indexed for efficient log filtering by hash.
+
+Selectors:
+- `witness(bytes32)` = `0x114ee197`
+- `witness(bytes32,bytes32)` = `0x3771f888`
+
+## Legacy: EventWriter (v1)
+
+Address: `0x45f59310ADD88E6d23ca58A0Fa7A55BEE6d2a611` (ETH mainnet, Sepolia, Holesky)
+
+Old contract using `write(bytes32[2])`. Still on-chain; old witnesses remain verifiable.
+
+## Usage
+
+1. Generate the SHA3 hash of your file: `sha3sum -a 256 $FILENAME` or `sha3sum -a 512 $FILENAME`
+2. For SHA3-256: call `witness(bytes32)` with the hash directly
+3. For SHA3-512: split the 64-byte hash into two 32-byte halves and call `witness(bytes32,bytes32)`
 
 # Deploy your own (event) writer contract
 
